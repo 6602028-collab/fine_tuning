@@ -21,7 +21,7 @@ This notebook environment is specifically designed to run on Google Colab. It ha
 * **Base model-** Llama-3.2-3B-Instruct, loaded via Unsloth's FastLanguageModel for optimized, memory-efficient loading.
 * **4-bit quantization (QLoRA-style)-** Built entirely on a Python 3 kernel for maximum compatibility and ease of use.
 * **Parameter-efficient fine-tuning with LoRA —** instead of updating all 3B parameters, only small low-rank adapter matrices are trained (rank r=16, lora_alpha=16), applied across both attention layers (q/k/v/o projections) and MLP layers (gate/up/down projections)..
-* **Reasoning-focused dataset-**trained on ServiceNow-AI/R1-Distill-SFT, which contains problem → reasoning-trace → solution triples distilled from DeepSeek-R1, so the goal is teaching how the model thinks, not just final answers.
+* **Reasoning-focused dataset-** trained on ServiceNow-AI/R1-Distill-SFT, which contains problem → reasoning-trace → solution triples distilled from DeepSeek-R1, so the goal is teaching how the model thinks, not just final answers.
 * **Reasoning-focused dataset-** trained on ServiceNow-AI/R1-Distill-SFT, which contains problem → reasoning-trace → solution triples distilled from DeepSeek-R1, so the goal is teaching how the model thinks, not just final answers.
 * * **Supervised fine-tuning (SFT)-** via SFTTrainer from TRL — trains the model to imitate the reasoning+solution text directly, with EOS_TOKEN appended so the model learns when to stop generating.
 
